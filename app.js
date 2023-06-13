@@ -5,7 +5,7 @@ var bodyparser = require('body-parser');
 var mongoose = require('mongoose');
 var port = process.env.PORT || 4201;
 var app = express();
-var server = require('https').createServer(app);
+var server = require('http').createServer(app);
 var io = require('socket.io')(server,{
     cors: {origin : '*'}
 });
@@ -30,7 +30,7 @@ var cliente_routes = require('./routes/cliente');
 var admin_routes = require('./routes/admin');
 var cupon_routes = require('./routes/cupon');
 
-mongoose.connect('mongodb+srv://Abdiel:abdielamq1010@atlascluster.u3prixw.mongodb.net/?retryWrites=true&w=majority',{useUnifiedTopology: true, useNewUrlParser: true}, (err,res)=>{git 
+mongoose.connect('mongodb+srv://Abdiel:abdielamq1010@atlascluster.u3prixw.mongodb.net/?retryWrites=true&w=majority',{useUnifiedTopology: true, useNewUrlParser: true}, (err,res)=>{
     if(err){  
         throw err;
         console.log(err);
