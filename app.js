@@ -30,7 +30,7 @@ var cliente_routes = require('./routes/cliente');
 var admin_routes = require('./routes/admin');
 var cupon_routes = require('./routes/cupon');
 
-mongoose.connect('mongodb://127.0.0.1:27017/tienda',{useUnifiedTopology: true, useNewUrlParser: true}, (err,res)=>{
+mongoose.connect('mongodb+srv://Abdiel:abdielamq1010@atlascluster.u3prixw.mongodb.net/?retryWrites=true&w=majority',{useUnifiedTopology: true, useNewUrlParser: true}, (err,res)=>{git 
     if(err){  
         throw err;
         console.log(err);
